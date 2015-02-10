@@ -146,7 +146,7 @@ bool client_disconnect(struct mpd_connection * m_connection) {
 }
 
 bool m_play(struct mpd_connection * m_connection) {
-    if(mpd_send_play(m_connection)) {
+    if(mpd_run_play(m_connection)) {
         printf("Playing\n");
         return true;
     } else {
@@ -167,7 +167,7 @@ bool m_toggle_pause(struct mpd_connection * m_connection) {
 }
 
 bool m_stop(struct mpd_connection * m_connection) {
-    if(mpd_send_stop(m_connection)) {
+    if(mpd_run_stop(m_connection)) {
         printf("Stopped\n");
         return true;
     } else {
