@@ -22,35 +22,20 @@ int song_id;
 static void gtk_toggle_pause(GtkWidget *widget, gpointer data) {
 
     m_srv_status(m_connection, m_status);
-
-    //m_play(m_connection);
     m_toggle_pause(m_connection);
-    //m_next_song(m_connection);
-    //m_prev_song(m_connection);
-
 
 }
 
 static void gtk_prev_song(GtkWidget *widget, gpointer data) {
 
     m_srv_status(m_connection, m_status);
-
-    //m_play(m_connection);
-    //m_toggle_pause(m_connection);
-    //m_next_song(m_connection);
     m_prev_song(m_connection);
-
 
 }
 
 static void gtk_next_song(GtkWidget *widget, gpointer data) {
     m_srv_status(m_connection, m_status);
-
-
-    //m_play(m_connection);
-    //m_toggle_pause(m_connection);
     m_next_song(m_connection);
-    //m_prev_song(m_connection);
 
 }
 
