@@ -54,7 +54,7 @@ on_delete_event (GtkWidget *widget,
 
   g_print ("delete event occurred\n");
 
-  return TRUE;
+  return FALSE;
 }
 
 
@@ -101,6 +101,8 @@ int main(int argc, char ** argv) {
     gtk_widget_show (toggle_pause_button);
 
     gtk_widget_show_all(window);
+    gtk_window_fullscreen((GtkWindow*)window);
+
 
     gtk_main();
     client_disconnect(m_connection);
