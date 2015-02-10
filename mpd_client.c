@@ -85,18 +85,24 @@ int main(int argc, char ** argv) {
     //prev_button setup
     prev_button = gtk_button_new_with_label ("Previous Song!");
     g_signal_connect (prev_button, "clicked", G_CALLBACK (gtk_next_song), NULL);
+    gtk_widget_set_hexpand (prev_button, TRUE);
+    gtk_widget_set_vexpand (prev_button, TRUE);
     gtk_grid_attach (GTK_GRID (grid), prev_button, 0, 0, 1, 1);
     gtk_widget_show (prev_button);
 
     //next_button setup
     next_button = gtk_button_new_with_label ("Next Song!");
     g_signal_connect (next_button, "clicked", G_CALLBACK (gtk_next_song), NULL);
+    gtk_widget_set_hexpand (next_button, TRUE);
+    gtk_widget_set_vexpand (next_button, TRUE);
     gtk_grid_attach (GTK_GRID (grid), next_button, 1, 0, 1, 1);
     gtk_widget_show (next_button);
 
     //toggle_pause_button setup
     toggle_pause_button = gtk_button_new_with_label ("Play/Pause");
     g_signal_connect (toggle_pause_button, "clicked", G_CALLBACK (gtk_toggle_pause), NULL);
+    gtk_widget_set_hexpand (toggle_pause_button, TRUE);
+    gtk_widget_set_vexpand (toggle_pause_button, TRUE);
     gtk_grid_attach (GTK_GRID (grid), toggle_pause_button, 0, 1, 2, 1);
     gtk_widget_show (toggle_pause_button);
 
